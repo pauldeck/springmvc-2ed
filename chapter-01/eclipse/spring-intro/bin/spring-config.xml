@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+    <bean name="product" class="springintro.bean.Product"/>
+    
+    <bean name="featuredProduct" class="springintro.bean.Product">
+		<constructor-arg name="name" value="Ultimate Olive Oil"/>
+        <constructor-arg name="description" value="The purest olive oil on the market"/>
+		<constructor-arg name="price" value="9.95"/>
+    </bean>
+    
+    <bean name="featuredProduct2" class="springintro.bean.Product">
+        <constructor-arg index="0" value="Ultimate Olive Oil"/>
+        <constructor-arg index="1" value="The purest olive oil on the market"/>
+        <constructor-arg index="2" value="9.95"/>
+    </bean>
+
+    <bean id="localDate" class="java.time.LocalDate"
+        factory-method="now"/>
+      
+    <bean name="employee1" class="springintro.bean.Employee">
+        <property name="homeAddress" ref="simpleAddress"/>
+        <property name="firstName" value="Junior"/>
+        <property name="lastName" value="Moore"/>
+    </bean>
+
+    <bean name="employee2" class="springintro.bean.Employee">
+        <constructor-arg name="firstName" value="Senior"/>
+        <constructor-arg name="lastName" value="Moore"/>
+        <constructor-arg name="homeAddress" ref="simpleAddress"/>
+    </bean>
+    
+    <bean name="simpleAddress" class="springintro.bean.Address">
+        <constructor-arg name="line1" value="151 Corner Street"/>
+        <constructor-arg name="line2" value=""/>
+        <constructor-arg name="city" value="Albany"/>
+        <constructor-arg name="state" value="NY"/>
+        <constructor-arg name="zipCode" value="99999"/>
+        <constructor-arg name="country" value="US"/>
+    </bean>
+</beans>

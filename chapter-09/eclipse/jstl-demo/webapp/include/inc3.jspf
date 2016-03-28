@@ -1,0 +1,4 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+inc3.jsp
+<img src="<c:url value="/image/image1.png"/>"/>
+<img src="<c:url value="/image/image2.png"/>"/>

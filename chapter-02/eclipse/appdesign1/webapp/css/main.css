@@ -1,0 +1,53 @@
+form {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 450px;
+    background: palegreen;
+    padding: 25px 15px 25px 10px;
+    border:1px solid #dedede;
+    font: 12px Arial;
+}
+h1 {
+    padding: 20px;
+    display: block;
+    border-bottom:1px solid grey;
+    margin: -20px 0px 20px 0px;
+    color: mediumpurple;
+}
+h1>span {
+    display: block;
+    font-size: 13px;
+}
+label {
+    display: block;
+}
+label>span {
+    float: left;
+    width: 20%;
+    text-align: right;
+    margin: 14px;
+    color: mediumpurple;
+    font-weight:bold;
+}
+input[type="text"], input[type="number"] {
+    border: 1px solid #dedede;
+    height: 30px;
+    width: 70%;
+    font-size: 12px;
+    border-radius: 3px;
+    margin: 5px;
+}
+input[type="submit"] {
+    background: mediumseagreen;
+    font-weight: bold;
+    border: none;
+    padding: 8px 20px 8px 20px;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left:4px;
+}
+input[type="submit"]:hover {
+    background: red;
+    color: yellow;
+}
